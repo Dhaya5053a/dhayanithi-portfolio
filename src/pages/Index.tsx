@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import ThreeDPortfolio from "@/components/ThreeDPortfolio";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
@@ -49,6 +50,10 @@ const Index = () => {
         
         <section id="skills" className="scroll-fade-in">
           <Skills />
+        </section>
+        
+        <section id="3d-portfolio" className="scroll-fade-in">
+          <ThreeDPortfolio />
         </section>
         
         <section id="experience" className="scroll-fade-in">
