@@ -39,18 +39,6 @@ const Skills = () => {
     }
   ];
 
-  const allSkills = [
-    { name: "Graphic Design", level: 90 },
-    { name: "HTML & CSS", level: 85 },
-    { name: "JavaScript", level: 75 },
-    { name: "Python", level: 70 },
-    { name: "Java", level: 65 },
-    { name: "Blender", level: 80 },
-    { name: "3D Design", level: 75 },
-    { name: "Video Editing", level: 85 },
-    { name: "Photo Editing", level: 88 },
-    { name: "Logo Design", level: 92 }
-  ];
 
   return (
     <section id="skills" className="py-20 px-6 bg-secondary/20">
@@ -94,34 +82,7 @@ const Skills = () => {
             </Card>
           ))}
         </div>
-
-        {/* Skill Progress Bars */}
-        <Card className="p-8 bg-gradient-to-br from-card to-secondary/20 border-border/50">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Proficiency Levels</h3>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            {allSkills.map((skill, index) => (
-              <div key={index} className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <span className="font-medium text-foreground">{skill.name}</span>
-                  <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                </div>
-                
-                <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
-                  <div 
-                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
-                    style={{ 
-                      width: `${skill.level}%`,
-                      animation: `slideIn 1.5s ease-out ${index * 0.1}s both`
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </Card>
       </div>
-
     </section>
   );
 };
